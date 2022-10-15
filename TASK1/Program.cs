@@ -5,32 +5,26 @@
 void Main()
 {
     Console.Clear();
-    int SIZE, max, min;
-    ReceiveSizeAndRangeOfArray(out SIZE, out max, out min );
-    int [] ourArray = GetArray(SIZE, max, min);
+    int SIZE;
+    ReceiveSizeAndRangeOfArray(out SIZE);
+    int [] ourArray = GetArray(SIZE);
     PrintArray(ourArray);
     HowManyEvenNumbersInArray(ourArray);
 
 }
 
-void ReceiveSizeAndRangeOfArray( out int size, out int maxVal, out int minVal)
+void ReceiveSizeAndRangeOfArray( out int size)
 {
     Console.WriteLine("Введите размер массива");
      size = int.Parse(Console.ReadLine()!);
-
-    Console.WriteLine("Введите максимальное значение массива");
-      maxVal = int.Parse(Console.ReadLine()!);
-
- Console.WriteLine("Введите минимальное значение массива");
-     minVal = int.Parse(Console.ReadLine()!);
     
 }
-int[] GetArray(int size, int maxVal, int minVal)
+int[] GetArray(int size)
 {
     int [] arr = new int[size+1];
     for ( int i =0; i< size+1; i++)
     {
-        arr[i] = new Random().Next(minVal, maxVal+1);
+        arr[i] = new Random().Next(100, 1000);
 
     }
     return arr;
