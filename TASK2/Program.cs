@@ -10,7 +10,7 @@ void Main()
     ReceiveSizeAndRangeOfArray(out SIZE, out max, out min );
     int [] ourArray = GetArray(SIZE, max, min);
     PrintArray(ourArray);
-  
+  SummOfUnevenIndexElements(ourArray);
 
 }
 
@@ -46,3 +46,16 @@ void PrintArray(int[] arr)
         Console.Write($" {arr[i]} ");
     }
 }
+
+void SummOfUnevenIndexElements(int[] arr)
+{
+    int summ = 0;
+
+    for(int i = 1; i<arr.Length -1; i = i+2)
+    {
+        summ += arr[i];
+
+    }
+    Console.WriteLine($"\nСумма элементов на нечетных позициях = {summ}");
+}
+Main();
