@@ -8,7 +8,7 @@ void Main()
     int SIZE;
     ReceiveSizeAndRangeOfArray(out SIZE);
     int [] ourArray = GetArray(SIZE);
-    PrintArray(ourArray);
+    //PrintArray(ourArray);
     HowManyEvenNumbersInArray(ourArray);
 
 }
@@ -21,29 +21,31 @@ void ReceiveSizeAndRangeOfArray( out int size)
 }
 int[] GetArray(int size)
 {
-    int [] arr = new int[size+1];
-    for ( int i =0; i< size+1; i++)
+    int [] arr = new int[size];
+    for ( int i =0; i< size; i++)
     {
         arr[i] = new Random().Next(100, 1000);
+        Console.Write($"{arr[i]} ");
 
     }
     return arr;
 
 }
 
-void PrintArray(int[] arr)
+/*void PrintArray(int[] arr)
 
 {
     Console.WriteLine("\nНаш массив");
-    for ( int i = 0; i<arr.Length-1; i++)
+    for ( int i = 0; i<arr.Length; i++)
     {
         Console.Write($" {arr[i]} ");
     }
-}
+}*/
+
 void HowManyEvenNumbersInArray (int[]arr)
 {
     int count =0;
-    for(int i =0; i<arr.Length-1; i++)
+    for(int i =0; i<arr.Length; i++)
     {
        
         
