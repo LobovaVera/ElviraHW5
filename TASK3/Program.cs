@@ -38,7 +38,7 @@ void PrintArray(double[] arr)
 
 
 double FindMaxOfArray(double[] arr)
-{double max = 0;
+{double max = arr[0];
 foreach(double el in arr)
 {
     if (el > max)
@@ -51,12 +51,13 @@ return max;
 
 
 double FindMinOfArray(double[] arr)
-{ double min = 0;
+{ double min = arr[0];
 foreach (double el in arr)
 {
     if(el<min)
     {
         min = el;
+       // Console.Write($"el = {el} min = {min}");
     }
 }
     return min;
